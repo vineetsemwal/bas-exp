@@ -1,6 +1,6 @@
 package collectionsexp;
 
-public class ProductKey {
+public class ProductKey implements Comparable{
     private final String model;
     private final String brand;
     private final int year;
@@ -45,5 +45,10 @@ public class ProductKey {
     @Override
     public String toString() {
         return model+"-"+brand+"-"+year;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return (model+"-"+brand).compareTo(((ProductKey)o).model+"-"+((ProductKey)o).brand);
     }
 }

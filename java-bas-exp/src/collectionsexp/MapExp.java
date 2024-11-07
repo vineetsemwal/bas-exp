@@ -10,7 +10,7 @@ public class MapExp {
 
         Map<ProductKey,Product>map=new LinkedHashMap<>();
         ProductKey key1=new ProductKey("m1","galaxy",2021);
-        Product product1=new Product(key1,"samasung galaxy",40000);
+        Product product1=new Product(key1,"samsung galaxy",40000);
         ProductKey key2=new ProductKey("i14","iphone",2023);
         Product product2=new Product(key2,"iphone 14",140000);
         map.put(key1,product1);
