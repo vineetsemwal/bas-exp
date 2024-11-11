@@ -59,8 +59,10 @@ public class CalculatorUnitTests {
     @Test
     void sum_2() {
         final int expectation = -12;
+        when(adder.add(-3, -9)).thenReturn(-12);
         final int result = calculator.sum(-3, -9);
         assertEquals(expectation, result);
+        verify(adder).add(-3,-9);
     }
 
     @Test
